@@ -1,25 +1,59 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
+import styled  from 'styled-components';
 import './App.css';
+import CreateNote from './CreateNote';
+import Editor from './Editor';
+import { ChangeStateFunc, ExportFunc } from './Note';
+// import { ChangeStateFunc, ExportFunc, Note } from './Note';
+import Note from './Note';
+
 
 function App() {
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Note >
+
+    <Wrapper>
+      {/* <div className="app"> */}
+
+        {/* <p>CRUD Application</p> */}
+
+        <CreateNote />
+      {/* <Editor /> */}
+
+
+        {/* <Note /> */}
+      {/* </div> */}
+    </Wrapper>
+    </Note>
   );
 }
 
 export default App;
+
+
+
+
+
+const Wrapper = styled.section`
+
+.app{
+  font-family: 'Rajdhani', sans-serif;
+}
+
+p{
+  width:100%;
+  margin:30px 0px 30px 0px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:54px;
+  text-shadow: 1px 1px 2px black;
+}
+`;
